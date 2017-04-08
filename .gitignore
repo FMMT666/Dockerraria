@@ -1,0 +1,12 @@
+*
+
+!.gitignore
+!.dockerignore
+
+!Dockerfile
+!runthis.sh
+!README.md
+
+# *** BRANCH TESTLOCAL ONLY ***
+!/tests
+!/tests/*
