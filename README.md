@@ -4,6 +4,7 @@ Docker-Playground
 Just my personal [Docker Playground][1].  
 Nothing to pull, fork or run.
 
+Current content is a Terraria 1.3.5.3 server.
 
 ---
 

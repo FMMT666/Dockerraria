@@ -5,6 +5,7 @@
 
 !Dockerfile
 !runthis.sh
+!config.txt
 !README.md
 
 # *** BRANCH TESTLOCAL ONLY ***
