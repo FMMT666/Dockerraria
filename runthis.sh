@@ -8,12 +8,12 @@ elif [ "$1" == "bash" ]; then
 	/bin/bash -login
 else
 	# copy the default Terraria config file
-	if [ ! -f /terraria/terraria.cfg ]; then
-		cp /serverconfig.txt /terraria/terraria.cfg
+	if [ ! -f /terraria/terraria.txt ]; then
+		cp /serverconfig.txt /terraria/terraria.txt
 	fi
 
 	if [ "$1" == "config" ]; then
-		/1353/Linux/TerrariaServer.bin.x86_64 -config /terraria/terraria.cfg
+		/1353/Linux/TerrariaServer.bin.x86_64 -config /terraria/terraria.txt
 	else
 		/1353/Linux/TerrariaServer.bin.x86_64 "$@"
 	fi
