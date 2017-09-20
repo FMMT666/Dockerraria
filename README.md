@@ -22,7 +22,7 @@ Actually, that's what I created it for :)
 
 ### CHANGES 2017/09/20:
 
-    - renamed the Github repo to sth - well, "meaningful"
+    - renamed the Github and Docker hub repos to sth - well, "meaningful"
 
 ### CHANGES 2017/04/30:
 
@@ -73,6 +73,7 @@ to be continued...
   - Click on "advanced settings" at the bottom.
   - In tab "Volume" click "Add Folder" and select the place where the worlds shall be stored,
     e.g. "/docker/terraria" and enter the mount path "/terraria".
+    Notice: Do _not_ change the mount path. This must be "/terraria".
   - In "Port-Settings" enter local port "7777" and container port "7777".
   - IMPORTANT: In the "Environment" tab, enter "config" in the "Execution Command" field at the bottom.
 
@@ -80,8 +81,9 @@ Start the container.
 After a while, go to "Container" and the "Details" of the running container and follow the
 instructions in the "Terminal" tab.
 
-    Warning: The Synology web app tends to crash (at least Firefox), while the world is generated
-    (consumes several dozen gigabytes of memory).  
+    Warning: The Synology web app tends to crash (at least Firefox),
+    while the world is generated. Those hundreds of lines with server
+    messages is just too much for this GHz CPU, lol...
     One solution is to quickly leave the "Terminal" tab and come back after 3..4 minutes.
 
 to be continued...
