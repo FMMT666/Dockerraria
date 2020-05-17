@@ -2,7 +2,7 @@ Dockerraria
 ===========
 
 Just another [Terraria server for Docker][1]  
-(and me learning Docker :-)  
+(and me (re-)learning Docker :-)  
 
 ---
 
@@ -12,6 +12,10 @@ Can also be deployed in a Synology NAS (Intel CPUs only).
 Actually, that's what I created it for :)
 
 ---
+## STATUS 2020/05/18:
+
+  Terraria server 1.4.0.2
+
 ## STATUS 2017/09/20:
 
   Terraria server 1.3.5.3
@@ -19,6 +23,10 @@ Actually, that's what I created it for :)
 
 ---
 ## NEWS:
+
+### CHANGES 2020/05/18:
+
+    - experimental 1.4.0.2 release
 
 ### CHANGES 2017/09/20:
 
