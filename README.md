@@ -2,7 +2,6 @@ Dockerraria
 ===========
 
 Just another [Terraria server for Docker][1]  
-(and me (re-)learning Docker :-)  
 
 ---
 
@@ -14,7 +13,12 @@ Actually, that's what I created it for :)
 ---
 ## STATUS 2020/05/18:
 
-  Terraria server 1.4.0.2
+  Terraria server 1.4.0.2  
+  
+  Tested with new and updating several 1.3 worlds. Seems to work fine.  
+  Anyway, creating a backup of your worlds or picking a different mounting directory is recommended.  
+
+  "Just in case" [tm]
 
 ## STATUS 2017/09/20:
 
@@ -26,7 +30,7 @@ Actually, that's what I created it for :)
 
 ### CHANGES 2020/05/18:
 
-    - experimental 1.4.0.2 release
+    - updated for Terraria 1.4.0.2 release
 
 ### CHANGES 2017/09/20:
 
