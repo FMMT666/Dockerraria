@@ -13,7 +13,7 @@ Actually, that's what I created it for :)
 ---
 ## STATUS 2020/05/23:
 
-  Terraria server 1.4.0.3  
+  Terraria server 1.4.0.4  
 
 
 ---
@@ -21,6 +21,7 @@ Actually, that's what I created it for :)
 
 ### CHANGES 2020/05/23:
 
+    - updated for Terraria 1.4.0.4 release lol
     - updated for Terraria 1.4.0.3 release
     - added Journey's End template variables to serverconfig.txt
 
