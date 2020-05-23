@@ -49,7 +49,7 @@ port=7777
 #password=p@55w0rd
 
 #Set the message of the day
-motd=Please don’t cut the purple trees!
+motd=Please do not cut the purple trees!
 
 #Sets the folder where world files will be stored
 worldpath=/terraria/worlds
@@ -72,3 +72,20 @@ banlist=/terraria/banlist.txt
 
 #Default system priority 0:Realtime, 1:High, 2:AboveNormal, 3:Normal, 4:BelowNormal, 5:Idle
 priority=0
+
+#Journey mode power permissions for every individual power. 0: Locked for everyone, 1: Can only be changed by host, 2: Can be changed by everyone
+#journeypermission_time_setfrozen=2
+#journeypermission_time_setdawn=2
+#journeypermission_time_setnoon=2
+#journeypermission_time_setdusk=2
+#journeypermission_time_setmidnight=2
+#journeypermission_godmode=2
+#journeypermission_wind_setstrength=2
+#journeypermission_rain_setstrength=2
+#journeypermission_time_setspeed=2
+#journeypermission_rain_setfrozen=2
+#journeypermission_wind_setfrozen=2
+#journeypermission_increaseplacementrange=2
+#journeypermission_setdifficulty=2
+#journeypermission_biomespread_setfrozen=2
+#journeypermission_setspawnrate=2

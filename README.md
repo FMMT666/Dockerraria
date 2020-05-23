@@ -11,26 +11,25 @@ Can also be deployed in a Synology NAS (Intel CPUs only).
 Actually, that's what I created it for :)
 
 ---
-## STATUS 2020/05/18:
+## STATUS 2020/05/23:
 
-  Terraria server 1.4.0.2  
-  
-  Tested with new and updating several 1.3 worlds. Seems to work fine.  
-  Anyway, creating a backup of your worlds or picking a different mounting directory is recommended.  
-
-  "Just in case" [tm]
-
-## STATUS 2017/09/20:
-
-  Terraria server 1.3.5.3
+  Terraria server 1.4.0.3  
 
 
 ---
 ## NEWS:
 
+### CHANGES 2020/05/23:
+
+    - updated for Terraria 1.4.0.3 release
+    - added Journey's End template variables to serverconfig.txt
+
 ### CHANGES 2020/05/18:
 
     - updated for Terraria 1.4.0.2 release
+      Tested with new and updating several 1.3 worlds. Seems to work fine.  
+      Anyway, creating a backup of your worlds or picking a different mounting directory is recommended.  
+      "Just in case" [tm]
 
 ### CHANGES 2017/09/20:
 
