@@ -11,13 +11,18 @@ Can also be deployed in a Synology NAS (Intel CPUs only).
 Actually, that's what I created it for :)
 
 ---
-## STATUS 2020/05/23:
+## STATUS 2020/06/09:
 
-  Terraria server 1.4.0.4  
+  Terraria server 1.4.0.5  
 
 
 ---
 ## NEWS:
+
+### CHANGES 2020/06/09:
+
+    - updated for Terraria 1.4.0.5 release
+    - updated serverconfig.txt
 
 ### CHANGES 2020/05/23:
 
