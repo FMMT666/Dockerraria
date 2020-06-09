@@ -60,29 +60,13 @@ Actually, that's what I created it for :)
 ---
 ## TODO:
 
-  - Synology installation/configure instructions and images
   - ...
 
     
 ---
 ## INSTALLATION:
 
-### Linux/macOS/Windows
-
-Get the Docker image from the Docker hub:
-
-    docker pull fmmt666/dockerraria
-
-Quick test, notice that the generated world will not be saved:
-
-    docker run --rm -it -p 7777:7777 fmmt666/dockerraria config
-
-And follow the instructions.
-
-to be continued...
-
-
-### Synology
+### Synology, first installation
 
   - Inside the Docker app, go to "Registry" and search for "fmmt666/dockerraria".
   - Fetch the image by either a double clicking or right-click and selecting "download image".
@@ -101,7 +85,34 @@ instructions in the "Terminal" tab.
     Warning: The Synology web app tends to crash (at least Firefox),
     while the world is generated. Those hundreds of lines with server
     messages is just too much for this GHz CPU, lol...
-    One solution is to quickly leave the "Terminal" tab and come back after 3..4 minutes.
+    One solution is to quickly leave the "Terminal" tab, after initiating the world building process
+    and come back after 3..4 minutes.
+
+### Synology, update
+
+  - Inside the Docker app, go to "Container", "fmmt666-dockerraria" and stop it, in case it's running
+  - Go to "Registry" and search for "fmmt666/dockerraria".
+  - Fetch the new image by either a double clicking or right-click and selecting "download image".
+  - Wait until the download completes. Important!
+  - Go to the "Container" tab, right click the existing "Dockerraria" entry and select "Settings", "Duplicate Settings"
+  - Enter a name to identify the new container
+  - Right click on the *old* container again and select "Edit"
+  - In the tab "Port Settings", either delete or change the "Local Port" value to something different than "7777"
+  - Right click on the *new* container and as you just did before, change the local port to "7777"
+  - done
+
+
+### Linux/macOS/Windows
+
+Get the Docker image from the Docker hub:
+
+    docker pull fmmt666/dockerraria
+
+Quick test, notice that the generated world will not be saved:
+
+    docker run --rm -it -p 7777:7777 fmmt666/dockerraria config
+
+And follow the instructions.
 
 to be continued...
 
