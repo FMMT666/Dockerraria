@@ -2,6 +2,7 @@ Dockerraria
 ===========
 
 Just another [Terraria server for Docker][1]  
+Supports the PC and the MOBILE version.  
 
 ---
 
@@ -11,13 +12,25 @@ Can also be deployed in a Synology NAS (Intel CPUs only).
 Actually, that's what I created it for :)
 
 ---
-## STATUS 2020/11/11:
+## WARNING WARNING WARNING
 
-  Terraria server 1.4.1.2  
+> BACKUP YOUR FILES BEFORE SWITCHING BETWEEN
+> THE PC AND THE MOBILE VERSION!1!!
+
+---
+## STATUS 2020/11/26:
+
+  Terraria server 1.4.1.2  PC
+  Terraria server 1.4.0.5  MOBILE  
 
 
 ---
 ## NEWS:
+
+### CHANGES 2020/11/26:
+
+    - added a server for the MOBILE version 1.4.0.5
+    - added startup control via environment variables
 
 ### CHANGES 2020/11/11:
 
@@ -65,14 +78,39 @@ Actually, that's what I created it for :)
     - initial version
 
 
----
-## TODO:
 
-  - ...
-
-    
 ---
 ## INSTALLATION:
+
+### Read this first
+
+As of 26.11.2020, a new startup mode selection via environment variables was build in.  
+These can either be set with "-e" added to the the Docker "run" command, e.g.
+
+    docker run --rm -it -p 7777:7777 -e STARTMODE=MOBILE fmmt666/dockerraria
+    docker run --rm -it -p 7777:7777 -e STARTMODE=PC fmmt666/dockerraria
+
+or in the Synology "Environment" tab.
+
+     Variable    | Value
+    -------------+-------------
+    STARTMODE    | MOBILE
+
+For now, the following variables are supported:
+
+    STARTMODE=PC      Start server in PC mode
+    STARTMODE=MOBILE  Start server in MOBILE mode
+    STARTMODE=BASH    Login and run bash. For debugging only.
+
+If STARTMODE is not defined, Dockerraria will run in the "old" compatibility mode.  
+This is documented below.
+
+> IT IS HIGHLY RECOMMENDED TO USE DIFFERENT VOLUMES FOR THE PC AND THE MOBILE VERSION!  
+> THE TWO VARIANTS ARE NOT COMPATIBLE AND MIGHT DESTROY YOUR WORLD FILES.  
+
+> BACKUP YOUR DATA BEFORE CHANGING THE START MODES!
+> BACKUP YOUR DATA BEFORE CHANGING THE START MODES!
+> BACKUP YOUR DATA BEFORE CHANGING THE START MODES!
 
 ### Synology, first installation
 
@@ -81,12 +119,22 @@ Actually, that's what I created it for :)
   - Go to the "Container" tab, highlight the downloaded image and click "Start".
   - Click on "advanced settings" at the bottom.
   - In tab "Volume" click "Add Folder" and select the place where the worlds shall be stored,
-    e.g. "/docker/terraria" and enter the mount path "/terraria".
+    e.g. "/docker/terraria" or "/docker/mobileterraria" and enter the mount path "/terraria".
     Notice: Do _not_ change the mount path. This must be "/terraria".
   - In "Port-Settings" enter local port "7777" and container port "7777".
-  - IMPORTANT: In the "Environment" tab, enter "config" in the "Execution Command" field at the bottom.
+
+As of 11/2020, it is recommended to use the new startup method via environment variables:
+
+  - In the "Environment" tab, add a "STARTMODE" variable and set its value to either "PC"
+    or "MOBILE", depending on which server you want to start. All in capital letters.
+
+For the old method and only for the PC variant (not necessary if you already set the STARTMODE
+variable above):
+  - In the "Environment" tab, enter "config" in the "Execution Command" field at the bottom.
+
 
 Start the container.  
+
 After a while, go to "Container" and the "Details" of the running container and follow the
 instructions in the "Terminal" tab.
 
@@ -118,22 +166,16 @@ Get the Docker image from the Docker hub:
 
 Quick test, notice that the generated world will not be saved:
 
+    docker run --rm -it -p 7777:7777 -e STARTMODE=PC fmmt666/dockerraria
+    docker run --rm -it -p 7777:7777 -e STARTMODE=MOBILE fmmt666/dockerraria
+
+Or with the "old" method:
+
     docker run --rm -it -p 7777:7777 fmmt666/dockerraria config
 
 And follow the instructions.
 
-to be continued...
-
-
----
-### USAGE:
-
-to be written...
-
-
----
-### INTERNALS:
-
+to be continued ...
 
 
 ---
@@ -143,3 +185,5 @@ FMMT666(ASkr)
 
 ---
 [1]: https://hub.docker.com/r/fmmt666/dockerraria/
+[2]: https://forums.terraria.org/index.php?threads/taking-the-journey-on-the-road-terraria-journeys-end-launches-on-mobile-today.98696/
+
