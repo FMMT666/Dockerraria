@@ -14,13 +14,15 @@ Actually, that's what I created it for :)
 ---
 ## WARNING WARNING WARNING
 
-> BACKUP YOUR FILES BEFORE SWITCHING BETWEEN
-> THE PC AND THE MOBILE VERSION!1!!
+Make sure to specify different save locations for the PC and Mobile versions!  
+The worlds are not compatible.
+
+> BACKUP YOUR DATA
 
 ---
 ## STATUS 2020/11/26:
 
-  Terraria server 1.4.1.2  PC
+  Terraria server 1.4.1.2  PC  
   Terraria server 1.4.0.5  MOBILE  
 
 
@@ -78,7 +80,6 @@ Actually, that's what I created it for :)
     - initial version
 
 
-
 ---
 ## INSTALLATION:
 
@@ -90,17 +91,18 @@ These can either be set with "-e" added to the the Docker "run" command, e.g.
     docker run --rm -it -p 7777:7777 -e STARTMODE=MOBILE fmmt666/dockerraria
     docker run --rm -it -p 7777:7777 -e STARTMODE=PC fmmt666/dockerraria
 
-or in the Synology "Environment" tab.
+or in the Synology "Environment" tab, e.g.:
 
      Variable    | Value
     -------------+-------------
-    STARTMODE    | MOBILE
+     STARTMODE   | MOBILE
 
 For now, the following variables are supported:
 
-    STARTMODE=PC      Start server in PC mode
-    STARTMODE=MOBILE  Start server in MOBILE mode
-    STARTMODE=BASH    Login and run bash. For debugging only.
+    STARTMODE
+      = PC     -> Start server in PC mode
+      = MOBILE -> Start server in MOBILE mode
+      = BASH   -> Login and run bash. For debugging only.
 
 If STARTMODE is not defined, Dockerraria will run in the "old" compatibility mode.  
 This is documented below.
