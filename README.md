@@ -81,7 +81,32 @@ The worlds are not compatible.
 
 
 ---
-## INSTALLATION:
+## SOME NOTES
+
+### Mobile Devices
+
+Notice that the Mobile devices need to connect via the "Online" button and not "Local".
+Just add the local IP address of your server or Synology NAS.
+
+### Port Forwarding
+
+As long as you are on the same local network, nothing else is required and there is no
+need to open or forward ports in your (Internet) router.  
+This is only required if you want to connect to your "server at home" from anywhere in
+the world.
+
+In this special case, it's usually required to forward the external port 7777 to port 7777
+of your local server's or Synology's IP address.
+
+Please consult the manual of your router on how to do this.  
+It's not hard to do, but also might expose your network to some security risk if you don't
+know what you're doing. If in doubt, don't do it.
+
+As an alternative and if you are the only one playing on your server or Synology, an OpenVPN
+connection with certificate is a much better option.
+
+---
+## INSTALLATION
 
 ### Read this first
 
@@ -99,10 +124,10 @@ or in the Synology "Environment" tab, e.g.:
 
 For now, the following variables are supported:
 
-    STARTMODE
-      = PC     -> Start server in PC mode
-      = MOBILE -> Start server in MOBILE mode
-      = BASH   -> Login and run bash. For debugging only.
+    STARTMODE set to
+      PC     -> Start server in PC mode
+      MOBILE -> Start server in MOBILE mode
+      BASH   -> Login and run bash. For debugging only.
 
 If STARTMODE is not defined, Dockerraria will run in the "old" compatibility mode.  
 This is documented below.
@@ -110,9 +135,9 @@ This is documented below.
 > IT IS HIGHLY RECOMMENDED TO USE DIFFERENT VOLUMES FOR THE PC AND THE MOBILE VERSION!  
 > THE TWO VARIANTS ARE NOT COMPATIBLE AND MIGHT DESTROY YOUR WORLD FILES.  
 
-> BACKUP YOUR DATA BEFORE CHANGING THE START MODES!
-> BACKUP YOUR DATA BEFORE CHANGING THE START MODES!
-> BACKUP YOUR DATA BEFORE CHANGING THE START MODES!
+> BACKUP YOUR DATA BEFORE CHANGING THE START MODES!  
+> BACKUP YOUR DATA BEFORE CHANGING THE START MODES!  
+> BACKUP YOUR DATA BEFORE CHANGING THE START MODES!  
 
 ### Synology, first installation
 
