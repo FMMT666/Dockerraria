@@ -29,7 +29,7 @@ The worlds are not compatible.
 ---
 ## NEWS:
 
-### CHANGES 2020/11/26:
+### CHANGES 2021/04/30:
 
     - updated for Terraria 1.4.2.2 release
 
@@ -197,7 +197,7 @@ Get the Docker image from the Docker hub:
 
 Quick test, notice that the generated world will not be saved:
 
-    docker run --rm -it -p 7777:7777 -e STARTMODE=PC fmmt666/dockerraria
+    docker run --rm -it -p 7777:7777 -e STARTMODE=PC     fmmt666/dockerraria
     docker run --rm -it -p 7777:7777 -e STARTMODE=MOBILE fmmt666/dockerraria
 
 Or with the "old" method:
