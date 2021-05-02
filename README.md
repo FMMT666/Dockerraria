@@ -29,6 +29,11 @@ The worlds are not compatible.
 ---
 ## NEWS:
 
+### CHANGES 2021/05/02:
+
+    - fixed bug: Terraria config file was ignored with new startup control
+    - added some notes for desktop computers
+
 ### CHANGES 2021/04/30:
 
     - updated for Terraria 1.4.2.2 release
@@ -205,6 +210,43 @@ Or with the "old" method:
     docker run --rm -it -p 7777:7777 fmmt666/dockerraria config
 
 And follow the instructions.
+
+to be continued ...
+
+To store the world, add existing ones or change the default server configuration file,
+you can either mount a Docker volume or a local directory (preferred variant).  
+Notice that the path to the directory needs to be an absolute; relative ones will not work.  
+
+By default and as pre-programmed in the config file, the files are internally (in Docker)
+stored in
+
+    /terraria          <- config file
+    /terraria/worlds   <- world files
+
+The "directory notation", to map this internal directory to your computer is
+
+    -v <local, absolute path on you computer>:/terraria
+
+E.g.:
+
+    docker run --rm -it -p 7777:7777 -v /home/hanswurst/terraria:/terraria -e STARTMODE=PC fmmt666/dockerraria
+
+After starting the container, you now would find the files in here:
+
+    /home/hanswurst/terraria          <- the default server config file will be available in here
+    /home/hanswurst/terraria/worlds   <- this is where the worlds will appear
+
+To add existing worlds, just copy them to the above folder.
+
+Additional command line arguments for the Terraria server can be added to the end of the line.  
+Skipping port and volume for visibility:
+
+    docker run --rm -it  ...  -e STARTMODE=PC fmmt666/dockerraria -world /terraria/worlds/superworld.wld
+
+If everything is running fine, you can omit the `--rm` command, which deletes the container after execution.  
+
+    docker run -it -p 7777:7777 -v /home/hanswurst/terraria:/terraria -e STARTMODE=PC fmmt666/dockerraria
+
 
 to be continued ...
 

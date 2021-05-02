@@ -36,10 +36,10 @@ else
 	else
 		if [ "$STARTMODE" = "MOBILE" ]; then
 			echo "STARTING MOBILE SERVER VIA VARIABLE"
-			/ServerLinux/TerrariaServer.bin.x86_64 "$@"
+			/ServerLinux/TerrariaServer.bin.x86_64 -config /terraria/terraria.txt "$@"
 		elif [ "$STARTMODE" = "PC" ]; then
 			echo "STARTING PC SERVER VIA VARIBLE"
-			/1422/Linux/TerrariaServer.bin.x86_64 "$@"
+			/1422/Linux/TerrariaServer.bin.x86_64 -config /terraria/terraria.txt "$@"
 		elif [ "$STARTMODE" = "BASH" ]; then
 			echo "STARTING BASH VIA VARIBLE"
 			/bin/bash -login
