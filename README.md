@@ -20,14 +20,18 @@ The worlds are not compatible.
 > BACKUP YOUR DATA
 
 ---
-## STATUS 2021/04/30:
+## STATUS 2022/04/12:
 
-  Terraria server 1.4.2.2  PC  
+  Terraria server 1.4.3.6  PC  
   Terraria server 1.4.0.5  MOBILE  
 
 
 ---
 ## NEWS:
+
+### CHANGES 2022/04/12:
+
+    - updated for Terraria 1.4.3.6 release
 
 ### CHANGES 2021/05/02:
 

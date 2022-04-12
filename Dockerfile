@@ -7,13 +7,15 @@ RUN  apt-get -y update && \
      apt-get -y upgrade && \
      apt-get -y install cowsay fortune joe mc wget && \
      echo "alias d='ls -la --color'" >> /root/.bashrc && \
-     wget -O tserver.zip "https://terraria.org/system/dedicated_servers/archives/000/000/045/original/terraria-server-1422.zip" && \
+     # links are not directly accessible from web page anymore; analysed via browser web tools
+     wget -O tserver.zip "https://terraria.org/api/download/pc-dedicated-server/terraria-server-1436.zip" && \
      unzip tserver.zip && \
      rm tserver.zip && \
-     rm -rf /1422/Mac && \
-     rm -rf /1422/Windows &&\
-     chmod +x '/1422/Linux/TerrariaServer.bin.x86_64' && \
-     wget -O tservermobile.zip "https://terraria.org/server/MobileTerrariaServer.zip" && \
+     rm -rf /1436/Mac && \
+     rm -rf /1436/Windows &&\
+     chmod +x '/1436/Linux/TerrariaServer.bin.x86_64' && \
+     # links are not directly accessible from web page anymore; analysed via browser web tools
+     wget -O tservermobile.zip "https://www.terraria.org/api/download/mobile-dedicated-server/MobileTerrariaServer.zip" && \
      unzip tservermobile.zip &&\
      rm tservermobile.zip &&\
      rm OSX_* &&\
