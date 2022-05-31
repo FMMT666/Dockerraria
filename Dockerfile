@@ -15,7 +15,7 @@ RUN  apt-get -y update && \
      rm -rf /1436/Windows &&\
      chmod +x '/1436/Linux/TerrariaServer.bin.x86_64' && \
      # links are not directly accessible from web page anymore; analysed via browser web tools
-     wget -O tservermobile.zip "https://www.terraria.org/api/download/mobile-dedicated-server/MobileTerrariaServer.zip" && \
+     wget -O tservermobile.zip "https://www.terraria.org/api/download/mobile-dedicated-server/Terraria-Mobile-Server-1.4.3.2.zip" && \
      unzip tservermobile.zip &&\
      rm tservermobile.zip &&\
      rm OSX_* &&\
