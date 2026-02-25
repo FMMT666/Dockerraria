@@ -25,7 +25,6 @@ The worlds are not compatible.
   Terraria server 1.4.5.5  PC  
   Terraria server 1.4.5.4  MOBILE  
 
-
 ---
 ## NEWS:
 
