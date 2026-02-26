@@ -7,40 +7,59 @@
 #-config <config file>				            Specifies the configuration file to use.
 #-port <port number>				              Specifies the port to listen on.
 #-players <number> / -maxplayers <number>	Sets the max number of players
-#-pass <password> / -password <password>	Sets the server password
-#-world <world file>				              Load a world and automatically start the server.
-#-autocreate <#>			                  	Creates a world if none is found in the path specified by -world. World size is specified by: 1(small), 2(medium), and 3(large).
-#-banlist <path>			                  	Specifies the location of the banlist. Defaults to "banlist.txt" in the working directory.
+#-pass <password> / -password <password>		Sets the server password
+#-world <world file>					Load a world and automatically start the server.
+#-autocreate <#>					Creates a world if none is found in the path specified by -world. World size is specified by: 1(small), 2(medium), and 3(large).
+#-banlist <path>					Specifies the location of the banlist. Defaults to "banlist.txt" in the working directory.
 #-worldname <world name>             			Sets the name of the world when using -autocreate.
-#-secure			                        		Adds addition cheat protection to the server.
-#-noupnp				                        	Disables automatic port forwarding
-#-steam                         					Enables Steam Support
-#-lobby <friends> or <private>             Allows friends to join the server or sets it to private if Steam is enabled
-#-ip <ip address>	Sets the IP address for the server to listen on
-#-forcepriority <priority>	Sets the process priority for this task. If this is used the "priority" setting below will be ignored.
-#-disableannouncementbox   Disables the text announcements Announcement Box makes when pulsed from wire.
-#-announcementboxrange <number>   Sets the announcement box text messaging range in pixels, -1 for serverwide announcements.
-#-seed <seed> Specifies the world seed when using -autocreate
+#-secure						Adds addition cheat protection to the server.
+#-noupnp						Disables automatic port forwarding
+#-steam							Enables Steam Support
+#-lobby <friends> or <private>				Allows friends to join the server or sets it to private if Steam is enabled
+#-ip <ip address>					Sets the IP address for the server to listen on
+#-forcepriority <priority>				Sets the process priority for this task. If this is used the "priority" setting below will be ignored.
+#-disableannouncementbox				Disables the text announcements Announcement Box makes when pulsed from wire.
+#-announcementboxrange <number>				Sets the announcement box text messaging range in pixels, -1 for serverwide announcements.
+#-seed <seed>						Specifies the world seed when using -autocreate
 
 #remove the # in front of commands to enable them.
 
+
+
+# WARNING
+#   Apparently, there's a bug in "early 2026" Terraria versions, I don't know which ones exactly,
+#   but if "autocreate" is enabled when "autoload" is specified too - and the sizes of the worlds
+#   do not match, then the server might crash.
+
+
+
 #Load a world and automatically start the server.
-#world=/terraria/worlds/world1.wld
+world=/terraria/worlds/terraria.wld
 
 #Creates a new world if none is found. World size is specified by: 1(small), 2(medium), and 3(large).
-autocreate=2
+autocreate=1
 
 #Sets the world seed when using autocreate
 #seed=AwesomeSeed
 
-#Sets the name of the world when using autocreate
-worldname=Terraria
+#Sets special seed options, overrides the seed text if enabled. 0(disabled), 1(enabled)
+#seed_celebration=1
+#seed_theconstant=1
+#seed_notthebees=1
+#seed_notraps=1
+#seed_fortheworthy=1
+#seed_remix=1
+#seed_drunk=1
+#seed_zenith=1
 
-#Sets the difficulty of the world when using autocreate 0(normal), 1(expert)
+#Sets the name of the world when using autocreate
+worldname=terraria
+
+#Sets the difficulty of the world when using autocreate 0(classic), 1(expert), 2(master), 3(journey)
 difficulty=0
 
 #Sets the max number of players allowed on a server.  Value must be between 1 and 255
-#maxplayers=8
+maxplayers=8
 
 #Set the port number
 port=7777
@@ -49,7 +68,7 @@ port=7777
 #password=p@55w0rd
 
 #Set the message of the day
-motd=Please do not cut the purple trees!
+motd=Please don't cut the purple trees!
 
 #Sets the folder where world files will be stored
 worldpath=/terraria/worlds
@@ -58,13 +77,13 @@ worldpath=/terraria/worlds
 #worldrollbackstokeep=2
 
 #The location of the banlist. Defaults to "banlist.txt" in the working directory.
-banlist=/terraria/banlist.txt
+#banlist=/terraria/banlist.txt
 
 #Adds addition cheat protection.
-#secure=1
+secure=1
 
 #Sets the server language from its language code. 
-#English = en-US, German = de-DE, Italian = it-IT, French = fr-FR, Spanish = es-ES, Russian = ru-RU, Chinese = zh-Hans, Portuguese = pt-BR, Polish = pl-PL,
+#English = en-US, German = de-DE, Italian = it-IT, French = fr-FR, Spanish = es-ES, Russian = ru-RU, Chinese (Simplified) = zh-Hans, Portuguese = pt-BR, Polish = pl-PL, Japanese = ja-JP, Korean = ko-KR, Chinese (Traditional) = zh-Hant
 #language=en-US
 
 #Automatically forward ports with uPNP

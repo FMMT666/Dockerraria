@@ -10,7 +10,7 @@ else
 		cp /serverconfig.txt /terraria/terraria.txt
 	fi
 
-	# if env variable "STARTMODE" is missing, we do it the old way, to remain compatibility
+	# if env variable "STARTMODE" is missing, we do it the old way, to maintain compatibility
 	if [ -z "$STARTMODE" ]; then 
 
 		if [ $# -eq 0 ]; then

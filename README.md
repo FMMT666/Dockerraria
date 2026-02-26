@@ -28,6 +28,14 @@ The worlds are not compatible.
 ---
 ## NEWS:
 
+### CHANGES 2026/02/26:
+
+    - fixed serverconfig.txt
+    - added serverconfig.txt note in readme
+    - added autocreate of a small "terraria.wld"
+    - fixed missing mc lib (for Dockerraria starting in "BASH" mode)
+    - some typos less now
+
 ### CHANGES 2026/02/25:
 
     - updated for Terraria 1.4.5.5 release
@@ -126,8 +134,8 @@ connection with certificate is a much better option.
 
 ### Read this first
 
-As of 26.11.2020, a new startup mode selection via environment variables was build in.  
-These can either be set with "-e" added to the the Docker "run" command, e.g.
+As of 26.11.2020, a new startup mode selection via environment variables was built in.  
+These can either be set with "-e" added to the Docker "run" command, e.g.
 
     docker run --rm -it -p 7777:7777 -e STARTMODE=MOBILE fmmt666/dockerraria
     docker run --rm -it -p 7777:7777 -e STARTMODE=PC fmmt666/dockerraria
@@ -232,7 +240,7 @@ stored in
 
 The "directory notation", to map this internal directory to your computer is
 
-    -v <local, absolute path on you computer>:/terraria
+    -v <local, absolute path on your computer>:/terraria
 
 E.g.:
 
@@ -253,6 +261,19 @@ Skipping port and volume for visibility:
 If everything is running fine, you can omit the `--rm` command, which deletes the container after execution.  
 
     docker run -it -p 7777:7777 -v /home/hanswurst/terraria:/terraria -e STARTMODE=PC fmmt666/dockerraria
+
+### serverconfig.txt
+
+By default, a prefilled "serverconfig.txt" is created in ```/terraria```.  
+Existing files will _not_ be overwritten. Good for you.  
+
+As of 2/2026, upon the first start, a new small world named "terraria.wld" will be created.  
+This might help you get going. As of then, the server config is yours ...
+
+> Notice that, if you already have an own "serverconfig.txt" in this location,  
+> the file paths must match your installation. Otherwise, nothing will be saved  
+> or strange things might happen.
+
 
 
 to be continued ...

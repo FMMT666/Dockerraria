@@ -5,7 +5,7 @@ LABEL maintainer="FMMT666 fmmt666@users.noreply.github.com"
 
 RUN  apt-get -y update && \
      apt-get -y upgrade && \
-     apt-get -y install cowsay fortune joe mc wget unzip && \
+     apt-get -y install cowsay fortune joe mc wget unzip libcom-err2 && \
      echo "alias d='ls -la --color'" >> /root/.bashrc && \
      # links are not directly accessible from web page anymore; analysed via browser web tools
      wget -O tserver.zip "https://terraria.org/api/download/pc-dedicated-server/terraria-server-1455.zip" && \
