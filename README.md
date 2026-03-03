@@ -28,10 +28,14 @@ The worlds are not compatible.
 ---
 ## NEWS:
 
+### CHANGES 2026/03/03:
+
+    - updated notes for Synology
+
 ### CHANGES 2026/02/26:
 
-    - fixed serverconfig.txt
-    - added serverconfig.txt note in readme
+    - fixed terraria.txt (server config)
+    - added server config note in readme
     - added autocreate of a small "terraria.wld"
     - fixed missing mc lib (for Dockerraria starting in "BASH" mode)
     - some typos less now
@@ -69,13 +73,13 @@ The worlds are not compatible.
 ### CHANGES 2020/06/09:
 
     - updated for Terraria 1.4.0.5 release
-    - updated serverconfig.txt
+    - updated terraria.txt (server config)
 
 ### CHANGES 2020/05/23:
 
     - updated for Terraria 1.4.0.4 release lol
     - updated for Terraria 1.4.0.3 release
-    - added Journey's End template variables to serverconfig.txt
+    - added Journey's End template variables to terraria.txt (server config)
 
 ### CHANGES 2020/05/18:
 
@@ -197,6 +201,22 @@ instructions in the "Terminal" tab.
 
 ### Synology, update
 
+    Warning: If containers are cloned, there's no possibility to change the parameters for the entry point.
+    Check by right clicking the old container and then selecting "details".
+    This should show something like:
+    
+      Execution Command: runthis.sh
+    
+    If there are any (older) parameters after the "runthis.sh", e.g.
+
+      Execution Command: runthis.sh config
+    
+    you have to create a new container from scratch.
+    All those parameters will be added to the server line, and the server does not like double, or wrong entries.
+
+    For Synology, it's recommended to exclusively make changes in the exposed server file.
+
+
   - Inside the Docker app, go to "Container", "fmmt666-dockerraria" and stop it, in case it's running
   - Go to "Registry" and search for "fmmt666/dockerraria".
   - Fetch the new image by either a double clicking or right-click and selecting "download image".
@@ -248,7 +268,7 @@ E.g.:
 
 After starting the container, you now would find the files in here:
 
-    /home/hanswurst/terraria          <- the default server config file will be available in here
+    /home/hanswurst/terraria          <- the default server config file will be available in here ("terraria.txt")
     /home/hanswurst/terraria/worlds   <- this is where the worlds will appear
 
 To add existing worlds, just copy them to the above folder.
@@ -262,15 +282,16 @@ If everything is running fine, you can omit the `--rm` command, which deletes th
 
     docker run -it -p 7777:7777 -v /home/hanswurst/terraria:/terraria -e STARTMODE=PC fmmt666/dockerraria
 
-### serverconfig.txt
+### server config (terraria.txt)
 
-By default, a prefilled "serverconfig.txt" is created in ```/terraria```.  
+By default, a prefilled server config, named "terraria.txt" is created in ```/terraria```.  
 Existing files will _not_ be overwritten. Good for you.  
+I renamed the file so you can keep existing, copied "serverconfig.txt" files as a reference in the same directory.
 
 As of 2/2026, upon the first start, a new small world named "terraria.wld" will be created.  
 This might help you get going. As of then, the server config is yours ...
 
-> Notice that, if you already have an own "serverconfig.txt" in this location,  
+> Notice that, if you already have an own "terraria.txt" in this location,  
 > the file paths must match your installation. Otherwise, nothing will be saved  
 > or strange things might happen.
 
