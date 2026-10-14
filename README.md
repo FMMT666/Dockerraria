@@ -2,7 +2,7 @@ Dockerraria
 ===========
 
 Just another [Terraria server for Docker][1]  
-Supports the PC and the MOBILE version.  
+Supports the PC and the (deprectaed) MOBILE version.  
 
 ---
 
@@ -20,13 +20,17 @@ The worlds are not compatible.
 > BACKUP YOUR DATA
 
 ---
-## STATUS 2026/03/09:
+## STATUS 2026/10/14:
 
-  Terraria server 1.4.5.6  PC  
-  Terraria server 1.4.5.4  MOBILE  
+  Terraria server 1.4.5.8  PC and MOBILE (crossplay)  
+  Terraria server 1.4.0.5  MOBILE (OLD, DEPRECATED)  
 
 ---
 ## NEWS:
+
+### CHANGES 2026/10/14:
+
+    - updated for Terraria 1.4.5.8 release
 
 ### CHANGES 2026/03/09:
 
@@ -116,6 +120,9 @@ The worlds are not compatible.
 ## SOME NOTES
 
 ### Mobile Devices
+
+As of v1.4.5, Terraria support crossplay. The dedicated MOBILE version is now depricated,  
+but I'll leave it in here (as long as the Terraria web site delivers the old binaries).
 
 Notice that the Mobile devices need to connect via the "Online" button and not "Local".
 Just add the local IP address of your server or Synology NAS.
@@ -234,6 +241,11 @@ instructions in the "Terminal" tab.
 
 
 ### Linux/macOS/Windows
+
+This will not work on Apple Silicon Macs, only Intel is supported.  
+But you're probably not here bc of that.
+
+For Linux or Windoze though:
 
 Get the Docker image from the Docker hub:
 

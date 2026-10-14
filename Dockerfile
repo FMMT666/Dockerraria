@@ -8,12 +8,12 @@ RUN  apt-get -y update && \
      apt-get -y install cowsay fortune joe mc wget unzip libcom-err2 && \
      echo "alias d='ls -la --color'" >> /root/.bashrc && \
      # links are not directly accessible from web page anymore; analysed via browser web tools
-     wget -O tserver.zip "https://terraria.org/api/download/pc-dedicated-server/terraria-server-1456.zip" && \
+     wget -O tserver.zip "https://terraria.org/api/download/pc-dedicated-server/terraria-server-1458.zip" && \
      unzip tserver.zip && \
      rm tserver.zip && \
-     rm -rf /1456/Mac && \
-     rm -rf /1456/Windows &&\
-     chmod +x '/1456/Linux/TerrariaServer.bin.x86_64' && \
+     rm -rf /1458/Mac && \
+     rm -rf /1458/Windows &&\
+     chmod +x '/1458/Linux/TerrariaServer.bin.x86_64' && \
      # links are not directly accessible from web page anymore; analysed via browser web tools
      wget -O tservermobile.zip "https://www.terraria.org/api/download/mobile-dedicated-server/MobileTerrariaServer.zip" && \
      unzip tservermobile.zip &&\
